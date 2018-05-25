@@ -1,0 +1,24 @@
+<div>
+  <input type="text" #newTodo>
+  <button (click)="addTodo(newTodo.value)">
+    ADD
+  </button>
+  <table>
+    <tr>
+      <th>
+        Label
+      </th>
+      <th>
+        Status
+      </th>
+    </tr>
+    <tr *ngFor="let list of ToDoList">
+      <td>
+        {{list.label}}
+      </td>
+      <td>
+        {{list.done ? '&#10003;' : '&#10005;'}}
+      </td>
+    </tr>
+  </table>
+</div>
